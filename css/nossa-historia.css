@@ -1,0 +1,268 @@
+
+body {
+    min-height: 100vh;
+    background: #F3F7FC;
+    color: #071B38;
+    font-family: Arial, sans-serif;
+}
+
+/* CABEÇALHO */
+
+.history-header {
+    height: 80px;
+    padding: 0 8%;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 20px rgba(7, 27, 56, 0.05);
+}
+
+.back-button {
+    color: #287DE0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #287DE0;
+}
+
+.header-heart {
+    font-size: 23px;
+}
+
+/* ABERTURA */
+
+.history-hero {
+    min-height: 510px;
+    padding: 90px 20px 60px;
+    background: linear-gradient(135deg, #071B38, #124477, #287DE0);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.history-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #B9DCFF;
+    font-weight: bold;
+}
+
+.hero-bunny {
+    font-size: 65px;
+    margin: 25px 0 10px;
+    animation: bunnyFloat 3s ease-in-out infinite;
+}
+
+.history-hero h1 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.history-hero p {
+    font-size: 17px;
+    color: #D9EAFE;
+}
+
+.start-date {
+    margin-top: 25px;
+    padding: 10px 22px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 30px;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.scroll-indicator {
+    margin-top: 45px;
+    font-size: 28px;
+    animation: arrowMove 1.5s infinite;
+}
+
+/* CAPÍTULOS */
+
+.history-content {
+    width: 88%;
+    max-width: 850px;
+    margin: 70px auto;
+}
+
+.history-chapter {
+    background: #FFFFFF;
+    padding: 40px;
+    margin-bottom: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(7, 27, 56, 0.05);
+    border-left: 4px solid #287DE0;
+}
+
+.chapter-number {
+    color: #287DE0;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.history-chapter h2,
+.distance-chapter h2,
+.final-chapter h2 {
+    font-size: 27px;
+    margin: 18px 0;
+}
+
+.chapter-date {
+    color: #718096;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.history-chapter p,
+.distance-chapter p,
+.final-chapter p {
+    color: #64748B;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-top: 15px;
+}
+
+/* DESTAQUE DOS 16 KM */
+
+.distance-chapter {
+    padding: 50px 40px;
+    margin: 45px 0;
+    border-radius: 22px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #071B38, #124477, #287DE0);
+    box-shadow: 0 15px 35px rgba(18, 68, 119, 0.2);
+}
+
+.distance-chapter .chapter-number {
+    color: #B9DCFF;
+}
+
+.bike-icon {
+    font-size: 65px;
+    margin: 25px 0;
+}
+
+.distance-chapter h2 {
+    color: white;
+}
+
+.distance-chapter p {
+    color: #D9EAFE;
+}
+
+.distance-chapter strong {
+    display: block;
+    margin-top: 25px;
+    font-size: 17px;
+    color: white;
+}
+
+/* FINAL */
+
+.final-chapter {
+    padding: 50px 40px;
+    background: white;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(7, 27, 56, 0.05);
+}
+
+.final-chapter .chapter-number {
+    color: #287DE0;
+}
+
+.final-declaration {
+    margin-top: 30px;
+    padding: 25px;
+    background: #EAF4FF;
+    border-radius: 15px;
+    color: #124477;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.8;
+}
+
+.signature {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #287DE0;
+    font-weight: bold;
+}
+
+.final-bunny {
+    font-size: 55px;
+    margin-top: 25px;
+    animation: bunnyFloat 3s ease-in-out infinite;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes bunnyFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes arrowMove {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+    .history-header {
+        padding: 0 5%;
+    }
+
+    .history-hero {
+        min-height: 430px;
+        padding: 65px 20px;
+    }
+
+    .history-hero h1 {
+        font-size: 36px;
+    }
+
+    .history-content {
+        width: 92%;
+        margin: 35px auto;
+    }
+
+    .history-chapter,
+    .distance-chapter,
+    .final-chapter {
+        padding: 28px 22px;
+    }
+
+    .history-chapter h2,
+    .distance-chapter h2,
+    .final-chapter h2 {
+        font-size: 23px;
+    }
+}

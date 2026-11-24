@@ -1,0 +1,359 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #EAF4FF, #FFFFFF, #DCEBFA);
+    color: #071B38;
+}
+
+.gift-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(7, 27, 56, 0.06);
+}
+
+.gift-header .logo {
+    font-size: 23px;
+    font-weight: 800;
+    color: #124477;
+}
+
+.gift-header .logo span {
+    color: #287DE0;
+}
+
+.back-button {
+    color: #124477;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.header-icon {
+    font-size: 25px;
+}
+
+.gift-container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 50px 25px;
+}
+
+.gift-hero {
+    text-align: center;
+    padding: 45px 20px;
+    background: linear-gradient(135deg, #071B38, #124477);
+    color: #FFFFFF;
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(7, 27, 56, 0.15);
+}
+
+.gift-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #B9D9FF;
+    font-weight: bold;
+}
+
+.gift-bunny {
+    font-size: 65px;
+    margin: 22px 0 12px;
+    animation: coelhoPresente 3s ease-in-out infinite;
+}
+
+.gift-hero h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.gift-hero p {
+    color: #EAF4FF;
+    line-height: 1.7;
+}
+
+.gift-subtitle {
+    display: block;
+    margin-top: 15px;
+    color: #B9D9FF;
+    font-size: 14px;
+}
+
+.gift-reveal {
+    text-align: center;
+    margin-top: 55px;
+    padding: 35px 20px;
+}
+
+.gift-box {
+    font-size: 115px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: inline-block;
+    animation: presenteFlutuando 3s ease-in-out infinite;
+    filter: drop-shadow(0 15px 15px rgba(18, 68, 119, 0.2));
+}
+
+.gift-reveal h2 {
+    color: #124477;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.gift-reveal p {
+    color: #60758C;
+    margin-bottom: 25px;
+}
+
+#openGiftButton {
+    background: linear-gradient(120deg, #124477, #287DE0);
+    color: #FFFFFF;
+    border: none;
+    padding: 16px 35px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(40, 125, 224, 0.25);
+    transition: 0.3s;
+}
+
+#openGiftButton:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(40, 125, 224, 0.35);
+}
+
+@keyframes coelhoPresente {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+@keyframes presenteFlutuando {
+    0%, 100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-13px) rotate(3deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .gift-header {
+        padding: 18px 5%;
+    }
+
+    .gift-hero {
+        padding: 35px 18px;
+    }
+
+    .gift-hero h1 {
+        font-size: 25px;
+    }
+
+    .gift-reveal h2 {
+        font-size: 21px;
+    }
+
+    .gift-box {
+        font-size: 95px;
+    }
+}/* REVELAÇÃO DO PRESENTE */
+
+.birthday-message {
+    max-width: 700px;
+    margin: 35px auto 0;
+    padding: 35px 28px;
+    background: #FFFFFF;
+    border: 1px solid #DCEBFA;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(18, 68, 119, 0.12);
+    animation: revelarMensagem 1s ease;
+}
+
+.birthday-message h2 {
+    color: #124477;
+    margin-bottom: 22px;
+    line-height: 1.5;
+}
+
+.birthday-message p {
+    color: #52677E;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.birthday-message h3 {
+    color: #287DE0;
+    line-height: 1.7;
+    margin-top: 30px;
+}
+
+.final-bunny {
+    font-size: 55px;
+    margin: 25px 0;
+    animation: coelhoPresente 3s ease-in-out infinite;
+}
+
+.gift-signature {
+    color: #124477 !important;
+    font-weight: bold;
+    text-align: right;
+}
+
+@keyframes revelarMensagem {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .birthday-message {
+        padding: 28px 20px;
+    }
+}/* CAIXA DE PRESENTE PERSONALIZADA */
+
+.gift-illustration {
+    position: relative;
+    width: 180px;
+    height: 175px;
+    margin: 20px auto 35px;
+    animation: presenteFlutuando 3s ease-in-out infinite;
+}
+
+.gift-base {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 160px;
+    height: 105px;
+    background: linear-gradient(135deg, #287DE0, #124477);
+    border-radius: 8px 8px 14px 14px;
+    box-shadow: 0 15px 25px rgba(18, 68, 119, 0.25);
+}
+
+.gift-lid {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 180px;
+    height: 38px;
+    background: linear-gradient(135deg, #78BFFF, #287DE0);
+    border-radius: 8px;
+    z-index: 2;
+    transform-origin: left bottom;
+    box-shadow: 0 5px 12px rgba(7, 27, 56, 0.15);
+}
+
+.gift-ribbon {
+    position: absolute;
+    top: 0;
+    left: 72px;
+    width: 36px;
+    height: 100%;
+    background: #FFFFFF;
+    opacity: 0.95;
+}
+
+.gift-lid .gift-ribbon {
+    left: 72px;
+}
+
+.gift-bow {
+    position: absolute;
+    width: 65px;
+    height: 35px;
+    top: -27px;
+    left: 57px;
+}
+
+.gift-bow::before,
+.gift-bow::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 25px;
+    border: 7px solid #FFFFFF;
+    border-radius: 50% 50% 0 50%;
+}
+
+.gift-bow::before {
+    left: 0;
+    transform: rotate(25deg);
+}
+
+.gift-bow::after {
+    right: 0;
+    transform: rotate(65deg) scaleX(-1);
+}
+
+.gift-sparkle {
+    position: absolute;
+    top: 0;
+    right: -15px;
+    font-size: 35px;
+    animation: brilhoPresente 1.5s ease-in-out infinite;
+}
+
+@keyframes brilhoPresente {
+    0%, 100% {
+        opacity: 0.4;
+        transform: scale(0.8) rotate(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(20deg);
+    }
+}/* ABERTURA DA CAIXA */
+
+.gift-illustration.opening {
+    animation: nenhuma;
+}
+
+.gift-illustration.opening .gift-lid {
+    animation: tampaAbrindo 1s ease forwards;
+}
+
+.gift-illustration.opening .gift-bow {
+    animation: lacoSubindo 0.8s ease forwards;
+}
+
+.gift-illustration.opening .gift-sparkle {
+    animation: brilhoExplosao 0.8s ease forwards;
+}
+
+@keyframes tampaAbrindo {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+
+    100% {
+        transform: translate(-35px, -85px) rotate(-25deg);
+        opacity: 0;
+    }
+}
+
+@keyframes lacoSubindo {
+    to {
+        transform: translateY(-100px) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+@keyframes brilhoExplosao {
+    to {
+        transform: scale(2.5) rotate(45deg);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,103 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--white);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+.container {
+    width: min(var(--container), calc(100% - 80px));
+    margin: 0 auto;
+}
+
+.section {
+    padding: 110px 0;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--blue);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+
+.eyebrow-line {
+    width: 30px;
+    height: 2px;
+    background: var(--blue);
+}
+
+.button-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: 17px 23px;
+    border: none;
+    border-radius: 7px;
+    background: var(--blue);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.button-primary:hover {
+    background: #1767C4;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(40, 125, 224, 0.3);
+}
+
+.button-primary span {
+    font-size: 18px;
+}
+
+.button-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.button-secondary:hover {
+    color: var(--blue-light);
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.text-link span {
+    font-size: 18px;
+    transition: var(--transition);
+}
+
+.text-link:hover span {
+    transform: translateX(5px);
+}
+
+::selection {
+    background: var(--blue);
+    color: white;
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: min(100% - 36px, var(--container));
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+}

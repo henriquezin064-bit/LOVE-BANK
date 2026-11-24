@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cartas de Amor | LOVE BANK</title>
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/cartas.css">
+</head>
+
+<body>
+
+    <header class="letters-header">
+        <a href="dashboard.html" class="back-button">
+            ← Minha conta
+        </a>
+
+        <div class="logo">LOVE BANK<span>.</span></div>
+
+        <div class="header-icon">💌</div>
+    </header>
+
+    <main class="letters-container">
+
+        <section class="letters-hero">
+            <span class="letters-label">LOVE BANK · CORRESPONDÊNCIAS</span>
+
+            <div class="hero-envelope">💌</div>
+
+            <h1>Cartas para você</h1>
+
+            <p>
+                Minha pequena, existem sentimentos que merecem
+                ser escritos e guardados.
+            </p>
+
+            <span class="letters-subtitle">
+                Com todo o amor, para minha princesinha Laís.
+            </span>
+        </section>
+
+        <section class="letters-content">
+
+            <div class="letters-introduction">
+                <h2>Seu cantinho de carinho ❤️</h2>
+
+                <p>
+                    Preparei algumas palavras especialmente para você.
+                    Cada carta guarda um pedacinho do que sinto.
+                </p>
+            </div>
+
+            <div class="letters-grid">
+
+                <button class="letter-card" type="button">
+                    <span class="envelope">💌</span>
+                    <h3>Uma declaração</h3>
+                    <p>O que meu coração gostaria de te dizer.</p>
+                    <span class="open-label">ABRIR CARTA →</span>
+                </button>
+
+                <button class="letter-card" type="button">
+                    <span class="envelope">💙</span>
+                    <h3>O quanto você é especial</h3>
+                    <p>Algumas palavras sobre o lugar que você ocupa na minha vida.</p>
+                    <span class="open-label">ABRIR CARTA →</span>
+                </button>
+
+                <button class="letter-card" type="button">
+                    <span class="envelope">🐰</span>
+                    <h3>Para minha pequena</h3>
+                    <p>Uma cartinha cheia de carinho para você.</p>
+                    <span class="open-label">ABRIR CARTA →</span>
+                </button>
+
+            </div>
+<div class="letter-modal" id="letterModal">
+    <div class="letter-paper">
+
+        <button class="close-letter" id="closeLetter">
+            ✕
+        </button>
+
+        <div class="letter-decoration">💌</div>
+
+        <h2 id="letterTitle">Uma declaração para minha princesinha ❤️</h2>
+
+        <div class="letter-text" id="letterText"></div>
+
+        <p class="letter-signature">
+            Com todo o amor do mundo,<br>
+            Seu menino. 💙🐰
+        </p>
+
+    </div>
+</div>
+        </section>
+
+    </main>
+<script src="../js/cartas.js"></script>
+</body>
+</html>

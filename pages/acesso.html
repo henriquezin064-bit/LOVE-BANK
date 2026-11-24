@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071B38">
+
+    <title>Acesso à conta | LOVE BANK</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/acesso.css">
+
+    <script src="../js/authentication.js" defer></script>
+</head>
+
+<body class="login-page">
+
+    <header class="login-header">
+        <a href="../index.html" class="brand">
+            <span class="brand-symbol">L</span>
+            <span class="brand-name">LOVE<span>BANK</span></span>
+        </a>
+
+        <a href="../index.html" class="back-link">
+            ← Voltar ao início
+        </a>
+    </header>
+
+    <main class="login-main">
+
+        <div class="login-decoration decoration-one"></div>
+        <div class="login-decoration decoration-two"></div>
+
+        <section class="login-card">
+
+            <div class="login-card-heading">
+                <div class="login-icon">L</div>
+
+                <span class="login-label">AMBIENTE EXCLUSIVO</span>
+
+                <h1>Bem-vinda de volta.</h1>
+
+                <p>
+                    Identifique-se para acessar sua experiência
+                    exclusiva LOVE BANK.
+                </p>
+            </div>
+
+            <div class="login-security">
+                <span>♧</span>
+                ACESSO PERSONALIZADO
+            </div>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+                    <label for="account">Identificação da titular</label>
+
+                    <div class="input-wrapper">
+                        <span class="input-icon">♙</span>
+
+                        <input
+                            type="text"
+                            id="account"
+                            value="LAÍS"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Senha de acesso</label>
+
+                    <div class="input-wrapper">
+                        <span class="input-icon">♧</span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Digite sua senha"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="password-toggle"
+                        >
+                            Mostrar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="login-options">
+                    <span>✦ Conta exclusiva da titular</span>
+                    <span>LOVE BANK</span>
+                </div>
+
+                <button type="submit" class="login-button">
+                    Acessar minha conta
+                    <span>→</span>
+                </button>
+
+                <p id="loginMessage" class="login-message"
+                   role="status" aria-live="polite"></p>
+
+            </form>
+
+            <div class="login-footer">
+                <span class="footer-lock">♧</span>
+                EXPERIÊNCIA EXCLUSIVA E PERSONALIZADA
+            </div>
+
+        </section>
+
+        <div class="login-bottom">
+            LOVE BANK · CONECTANDO HISTÓRIAS, GUARDANDO SENTIMENTOS.
+        </div>
+
+    </main>
+
+</body>
+</html>

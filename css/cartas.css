@@ -1,0 +1,341 @@
+
+body {
+    min-height: 100vh;
+    background: #F3F7FC;
+    color: #071B38;
+    font-family: Arial, sans-serif;
+}
+
+/* CABEÇALHO */
+
+.letters-header {
+    height: 80px;
+    padding: 0 8%;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 20px rgba(7, 27, 56, 0.05);
+}
+
+.back-button {
+    color: #287DE0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #287DE0;
+}
+
+.header-icon {
+    font-size: 25px;
+}
+
+/* ABERTURA */
+
+.letters-hero {
+    min-height: 390px;
+    padding: 75px 20px;
+    background: linear-gradient(135deg, #071B38, #124477, #287DE0);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.letters-label {
+    color: #B9DCFF;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero-envelope {
+    font-size: 65px;
+    margin: 25px 0 10px;
+    animation: envelopeFloat 3s ease-in-out infinite;
+}
+
+.letters-hero h1 {
+    font-size: 43px;
+    margin: 10px 0;
+}
+
+.letters-hero p {
+    max-width: 500px;
+    color: #D9EAFE;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.letters-subtitle {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #B9DCFF;
+}
+
+/* CONTEÚDO */
+
+.letters-content {
+    width: 88%;
+    max-width: 1100px;
+    margin: 65px auto;
+}
+
+.letters-introduction {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.letters-introduction h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.letters-introduction p {
+    color: #718096;
+    line-height: 1.7;
+}
+
+/* CARTÕES */
+
+.letters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.letter-card {
+    padding: 35px 25px;
+    background: white;
+    border: 1px solid #E5EDF7;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    color: #071B38;
+    box-shadow: 0 8px 25px rgba(7, 27, 56, 0.05);
+    transition: 0.3s;
+}
+
+.letter-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(40, 125, 224, 0.13);
+    border-color: #B9DCFF;
+}
+
+.envelope {
+    display: block;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.letter-card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.letter-card p {
+    color: #718096;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 45px;
+}
+
+.open-label {
+    display: block;
+    margin-top: 25px;
+    color: #287DE0;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes envelopeFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+    .letters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .letters-content {
+        width: 92%;
+    }
+}
+
+@media (max-width: 600px) {
+    .letters-header {
+        padding: 0 5%;
+    }
+
+    .letters-hero h1 {
+        font-size: 34px;
+    }
+
+    .letters-hero {
+        min-height: 350px;
+    }
+
+    .letters-content {
+        margin: 40px auto;
+    }
+}
+/* JANELA DA CARTA */
+
+.letter-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(7, 27, 56, 0.75);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.letter-modal.active {
+    display: flex;
+    animation: aparecerCarta 0.4s ease;
+}
+
+.letter-paper {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    max-width: 650px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 45px 35px;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: abrirCarta 0.6s ease;
+}
+
+.close-letter {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    border: none;
+    background: #EAF4FF;
+    color: #124477;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.letter-decoration {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.letter-paper h2 {
+    color: #124477;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.letter-text {
+    color: #34445A;
+    line-height: 1.9;
+    white-space: pre-line;
+    font-size: 15px;
+}
+
+.letter-signature {
+    color: #124477;
+    text-align: right;
+    line-height: 1.8;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+@keyframes aparecerCarta {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes abrirCarta {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .letter-paper {
+        padding: 45px 22px 30px;
+    }
+}/* ANIMAÇÃO DOS ENVELOPES */
+
+.letter-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-origin: center;
+}
+
+.letter-card:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.letter-card:active {
+    transform: scale(0.94);
+}
+
+.letter-card .envelope {
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+.letter-card:hover .envelope {
+    transform: translateY(-8px) rotate(-10deg) scale(1.15);
+}
+
+.letter-modal.active .letter-paper {
+    animation: abrirCartaEspecial 0.8s cubic-bezier(.17,.67,.3,1.3);
+}
+
+@keyframes abrirCartaEspecial {
+    0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.75) rotate(-4deg);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(-8px) scale(1.03) rotate(1deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0);
+    }
+}

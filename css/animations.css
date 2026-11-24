@@ -1,0 +1,74 @@
+/* ENTRADA SUAVE DOS ELEMENTOS */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+}
+
+.hero-copy {
+    animation: fadeUp 0.9s ease both;
+}
+
+.hero-visual {
+    animation: fadeUp 1.1s ease both;
+}
+
+.floating-label {
+    animation: floating 5s ease-in-out infinite;
+}
+
+.label-bottom {
+    animation-delay: 1s;
+}
+
+.visual-glow {
+    animation: glow 5s ease-in-out infinite;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
